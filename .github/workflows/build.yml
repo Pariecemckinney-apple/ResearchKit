@@ -21,6 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set Xcode Version
-        run: sudo xcode-select -s /Applications/Xcode_15.3.app
+        run: sudo xcode-select -s /Applications/Xcode_16.0.app
       - name: Test
         run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -verbose -workspace RKWorkspace.xcworkspace -scheme ${{ matrix.scheme }} -destination ${{ matrix.destination }} build test | xcpretty
